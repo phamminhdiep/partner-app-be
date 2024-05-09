@@ -1,6 +1,6 @@
-package com.example.partnerbackend.module.service_registry;
+package com.example.partnerbackend.repository;
 
-import com.example.partnerbackend.module.service_registry.Services;
+import com.example.partnerbackend.entity.Services;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

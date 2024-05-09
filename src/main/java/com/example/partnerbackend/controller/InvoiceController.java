@@ -1,5 +1,8 @@
-package com.example.partnerbackend.module.pay;
+package com.example.partnerbackend.controller;
 
+import com.example.partnerbackend.entity.Invoice;
+import com.example.partnerbackend.service.InvoiceService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,6 +14,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("/api/v1/invoice")
+@SecurityRequirement(name = "Authorization")
 @Tag(name = "Invoice", description = "Invoice APIs")
 public class InvoiceController {
     private final InvoiceService invoiceService;

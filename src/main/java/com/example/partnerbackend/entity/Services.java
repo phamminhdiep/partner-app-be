@@ -1,4 +1,4 @@
-package com.example.partnerbackend.module.service_registry;
+package com.example.partnerbackend.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

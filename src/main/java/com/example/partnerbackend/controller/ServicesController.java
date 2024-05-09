@@ -1,5 +1,8 @@
-package com.example.partnerbackend.module.service_registry;
+package com.example.partnerbackend.controller;
 
+import com.example.partnerbackend.entity.Services;
+import com.example.partnerbackend.service.ServicesService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,6 +14,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("/api/v1/services")
+@SecurityRequirement(name = "Authorization")
 @Tag(name = "Services", description = "Services APIs")
 public class ServicesController {
     private final ServicesService servicesService;

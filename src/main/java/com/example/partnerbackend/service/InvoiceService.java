@@ -1,8 +1,8 @@
-package com.example.partnerbackend.module.pay;
+package com.example.partnerbackend.service;
 
-import com.example.partnerbackend.module.service_registry.ServiceUsage;
-import com.example.partnerbackend.module.partner.PartnerService;
-import com.example.partnerbackend.module.service_registry.ServiceUsageService;
+import com.example.partnerbackend.entity.Invoice;
+import com.example.partnerbackend.entity.ServiceUsage;
+import com.example.partnerbackend.repository.InvoiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

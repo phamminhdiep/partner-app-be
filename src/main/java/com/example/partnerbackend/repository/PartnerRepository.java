@@ -1,5 +1,6 @@
-package com.example.partnerbackend.module.partner;
+package com.example.partnerbackend.repository;
 
+import com.example.partnerbackend.entity.Partner;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

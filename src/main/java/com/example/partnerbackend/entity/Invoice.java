@@ -1,4 +1,4 @@
-package com.example.partnerbackend.module.service_registry;
+package com.example.partnerbackend.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -14,16 +14,15 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-public class ServiceUsage {
+public class Invoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long serviceId;
-    private Long partnerId;
+    @Column(name = "settlement_date")
     @CreatedDate
-    private Date date;
-    private Integer amount;
-    private Long invoiceId;
-    private Double total;
-    private boolean status;
+    private Date settlementDate;
+    private Long partnerId;
+    private String name;
+    private Double total = 0d;
+    private boolean status = false;
 }

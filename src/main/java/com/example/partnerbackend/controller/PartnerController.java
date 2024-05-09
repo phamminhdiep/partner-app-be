@@ -1,6 +1,9 @@
-package com.example.partnerbackend.module.partner;
+package com.example.partnerbackend.controller;
 
 import com.example.partnerbackend.middleware.Response;
+import com.example.partnerbackend.entity.Partner;
+import com.example.partnerbackend.service.PartnerService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,6 +15,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("/api/v1/partner")
+@SecurityRequirement(name = "Authorization")
 @Tag(name = "Partner", description = "Partners APIs")
 public class PartnerController {
     private final PartnerService partnerService;

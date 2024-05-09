@@ -1,6 +1,9 @@
-package com.example.partnerbackend.module.service_registry;
+package com.example.partnerbackend.controller;
 
 import com.example.partnerbackend.dto.ServiceUsageDto;
+import com.example.partnerbackend.entity.ServiceUsage;
+import com.example.partnerbackend.service.ServiceUsageService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,6 +15,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("/api/v1/service-usage")
+@SecurityRequirement(name = "Authorization")
 @Tag(name = "Service Usage", description = "Service Usage APIs")
 public class ServiceUsageController {
     private final ServiceUsageService serviceUsageService;

@@ -1,6 +1,6 @@
-package com.example.partnerbackend.module.pay;
+package com.example.partnerbackend.repository;
 
-import com.example.partnerbackend.module.pay.Invoice;
+import com.example.partnerbackend.entity.Invoice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

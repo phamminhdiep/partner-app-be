@@ -1,4 +1,4 @@
-package com.example.partnerbackend.module.partner;
+package com.example.partnerbackend.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;

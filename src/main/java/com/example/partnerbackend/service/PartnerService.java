@@ -1,5 +1,7 @@
-package com.example.partnerbackend.module.partner;
+package com.example.partnerbackend.service;
 
+import com.example.partnerbackend.entity.Partner;
+import com.example.partnerbackend.repository.PartnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

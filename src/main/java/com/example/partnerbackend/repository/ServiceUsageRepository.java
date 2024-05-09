@@ -1,7 +1,7 @@
-package com.example.partnerbackend.module.service_registry;
+package com.example.partnerbackend.repository;
 
 import com.example.partnerbackend.dto.ServiceUsageDto;
-import com.example.partnerbackend.module.service_registry.ServiceUsage;
+import com.example.partnerbackend.entity.ServiceUsage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
