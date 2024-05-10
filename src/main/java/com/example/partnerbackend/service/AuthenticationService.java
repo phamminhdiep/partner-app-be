@@ -4,7 +4,7 @@ import com.example.partnerbackend.config.JwtService;
 import com.example.partnerbackend.dto.AuthenticationRequest;
 import com.example.partnerbackend.dto.AuthenticationResponse;
 import com.example.partnerbackend.dto.RegisterRequest;
-import com.example.partnerbackend.entity.Role;
+import com.example.partnerbackend.entity.role.Role;
 import com.example.partnerbackend.entity.Token;
 import com.example.partnerbackend.entity.User;
 import com.example.partnerbackend.repository.TokenRepository;

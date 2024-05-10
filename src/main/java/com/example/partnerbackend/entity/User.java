@@ -1,5 +1,6 @@
 package com.example.partnerbackend.entity;
 
+import com.example.partnerbackend.entity.role.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
