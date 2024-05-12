@@ -34,12 +34,7 @@ public class SecurityConfiguration {
             "/v3/api-docs/**",
             "/swagger-ui/**",
             "/api/v1/auth/**",
-            "/api/v1/demo/**",
-            "/api/v1/news/**",
-            "/api/v1/teams/**",
-            "/api/v1/matches/**",
-            "/api/v1/notification/**",
-            "/api/v1/news/comment/**",
+            "/api/v1/payment/**",
             "/health/**",
             "/actuator/**"
     };
