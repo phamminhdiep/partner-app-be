@@ -35,8 +35,9 @@ public class InvoiceService {
     }
 
     public Invoice saveInvoice(Invoice invoice) {
-        invoice.setPartnerId(partnerService.getPartnerById(invoice.getPartnerId()).getId());
-        return invoiceRepository.save(invoice);
+//        invoice.setPartnerId(partnerService.getPartnerById(invoice.getPartnerId()).getId());
+//        return invoiceRepository.save(invoice);
+        return null;
     }
 
     public void deleteInvoice(Long id) {
@@ -45,17 +46,19 @@ public class InvoiceService {
 
     @Transactional
     public Invoice generateInvoice(Long partnerId, List<Long> serviceUsageIds) {
-        Invoice savedInvoice = invoiceRepository.save(new Invoice());
-
-        savedInvoice.setPartnerId(partnerId);
-        double total = 0;
-        for(Long serviceUsageId : serviceUsageIds) {
-            ServiceUsage serviceUsage = serviceUsageService.getServiceUsageById(serviceUsageId);
-            serviceUsage.setStatus(true);
-            serviceUsage.setInvoiceId(savedInvoice.getId());
-            total += serviceUsageService.getServiceUsageById(serviceUsageId).getTotal();
-        }
-        savedInvoice.setTotal(total);
-        return savedInvoice;
+//        Invoice savedInvoice = invoiceRepository.save(new Invoice());
+//
+//        savedInvoice.setPartnerId(partnerId);
+//        double total = 0;
+//        for(Long serviceUsageId : serviceUsageIds) {
+//            ServiceUsage serviceUsage = serviceUsageService.getServiceUsageById(serviceUsageId);
+//            serviceUsage.setStatus(true);
+//            serviceUsage.setInvoiceId(savedInvoice.getId());
+//            total += serviceUsageService.getServiceUsageById(serviceUsageId).getTotal();
+//        }
+//        savedInvoice.setTotal(total);
+//        return savedInvoice;
+//    }
+        return null;
     }
 }

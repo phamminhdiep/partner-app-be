@@ -8,6 +8,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,8 +22,10 @@ public class Invoice {
     @Column(name = "settlement_date")
     @CreatedDate
     private Date settlementDate;
-    private Long partnerId;
     private String name;
     private Double total = 0d;
-    private boolean status = false;
+    @OneToOne
+    private User user;
+    @OneToMany(mappedBy = "invoice")
+    private List<ServiceUsage> serviceUsages;
 }

@@ -18,12 +18,17 @@ public class ServiceUsage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long serviceId;
-    private Long partnerId;
+    @ManyToOne
+    private Services service;
+    @ManyToOne
+    private Partner partner;
+    @ManyToOne
+    private Schedule schedule;
+    @ManyToOne
+    private Invoice invoice;
     @CreatedDate
     private Date date;
     private Integer amount;
-    private Long invoiceId;
     private Double total;
     private boolean status;
 }

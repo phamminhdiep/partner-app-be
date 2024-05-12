@@ -30,12 +30,13 @@ public class ServiceUsageService {
     }
     public ServiceUsage saveServiceUsage(ServiceUsage serviceUsage) {
 
-        Services service = servicesService.getServiceById(serviceUsage.getServiceId());
-
-        serviceUsage.setStatus
-                (false);
-        serviceUsage.setTotal(service.getPrice() * serviceUsage.getAmount());
-        return serviceUsageRepository.save(serviceUsage);
+//        Services service = servicesService.getServiceById(serviceUsage.getServiceId());
+//
+//        serviceUsage.setStatus
+//                (false);
+//        serviceUsage.setTotal(service.getPrice() * serviceUsage.getAmount());
+//        return serviceUsageRepository.save(serviceUsage);
+        return null;
     }
     public void deleteServiceUsage(Long id) {
         serviceUsageRepository.deleteById(id);
