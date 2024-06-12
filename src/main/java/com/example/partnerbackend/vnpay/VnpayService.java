@@ -18,13 +18,13 @@ import java.util.TimeZone;
 
 @Service
 public class VnpayService {
-    public CreatePaymentResponse createPaymentUrl(CreatePaymentRequest req) throws UnsupportedEncodingException {
+    public CreatePaymentResponse createPaymentUrl(Double amount, String service_used_list) throws UnsupportedEncodingException {
         try{
             String vnp_Version = "2.1.0";
             String vnp_Command = "pay";
             String orderType = "other";
-            double amount_db = req.getAmount()*100;
-            long amount = (long) amount_db;
+            double amount_db = amount*100;
+            long total_amount = (long) amount_db;
 
             String vnp_TxnRef = ConfigVnpay.getRandomNumber(8);
 
@@ -34,15 +34,16 @@ public class VnpayService {
             vnp_Params.put("vnp_Version", vnp_Version);
             vnp_Params.put("vnp_Command", vnp_Command);
             vnp_Params.put("vnp_TmnCode", vnp_TmnCode);
-            vnp_Params.put("vnp_Amount", String.valueOf(amount));
+            vnp_Params.put("vnp_Amount", String.valueOf(total_amount));
             vnp_Params.put("vnp_CurrCode", "VND");
             vnp_Params.put("vnp_BankCode", "VNBANK");
             vnp_Params.put("vnp_TxnRef", vnp_TxnRef);
-            vnp_Params.put("vnp_OrderInfo", "Thanh toan phi dich vu" + vnp_TxnRef);
+            vnp_Params.put("vnp_OrderInfo", service_used_list);
             vnp_Params.put("vnp_OrderType", orderType);
             vnp_Params.put("vnp_Locale", "vn");
             vnp_Params.put("vnp_ReturnUrl", ConfigVnpay.vnp_ReturnUrl);
             vnp_Params.put("vnp_IpAddr", "127.0.0.1");
+//            vnp_Params.put("service_used_list", service_used_list);
 
             Calendar cld = Calendar.getInstance(TimeZone.getTimeZone("Etc/GMT+7"));
             SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");

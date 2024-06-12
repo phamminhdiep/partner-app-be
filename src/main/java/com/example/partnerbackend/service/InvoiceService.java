@@ -35,9 +35,7 @@ public class InvoiceService {
     }
 
     public Invoice saveInvoice(Invoice invoice) {
-//        invoice.setPartnerId(partnerService.getPartnerById(invoice.getPartnerId()).getId());
-//        return invoiceRepository.save(invoice);
-        return null;
+        return invoiceRepository.save(invoice);
     }
 
     public void deleteInvoice(Long id) {
